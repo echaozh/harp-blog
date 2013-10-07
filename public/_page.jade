@@ -1,0 +1,8 @@
+- var page = (function (cur) {
+-   var data = public;
+-   for (var i = 0; i < cur.path.length - 1; ++i) {
+-     data = data[cur.path[i]];
+-   }
+-   data = data.data[cur.path[cur.path.length - 1]];
+-   return data;
+- }) (current);

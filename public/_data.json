@@ -1,0 +1,20 @@
+{
+    "_site": {
+        "name": "A Path Less Travelled"
+    },
+    "_layout": {
+        "extras": ["about", "family", "resumes"]
+    },
+    "index": {
+        "title": "A Path Less Travelled"
+    },
+    "resumes": {
+        "title": "Zhang Yichao's Resumes"
+    },
+    "about": {
+        "title": "About Me"
+    },
+    "family": {
+        "title": "My Family"
+    }
+}

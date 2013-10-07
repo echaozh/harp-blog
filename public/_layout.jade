@@ -1,0 +1,36 @@
+include _page
+
+!!!
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content "IE=edge,chrome=1")
+  meta(name="viewport", content="width=device-width")
+  title!= page.title
+  //  syntax highlighting CSS
+  link(rel="stylesheet", href="/css/syntax.css")
+  //  Custom CSS
+  link(rel="stylesheet", href="/css/main.css")
+  if page.css
+    link(rel="stylesheet", href="/css/#{page.css}.css")
+body
+  .site
+    .header
+      h1.title
+        a(href="/")
+          != public.data._site.name
+      a.extra(href="/") home
+      each extra in extras
+        a.extra(href="/#{extra}.html")
+          != extra
+    .content
+      != yield
+    .footer
+      address.contact
+        p
+          a(href="/about.html") Zhang Yichao
+          br
+          a(href="https://github.com/echaozh") On GitHub
+          br
+          a(href="http://weibo.com/echaozh") On Weibo
+          br
+          a(href="mailto:echaozh@gmail.com") By Gmail

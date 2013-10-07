@@ -1,0 +1,32 @@
+- var tagsForPosts = function(data) {
+-   var tags = {};
+-   for (var name in data) {
+-     if (name[0] != '_') {
+-       var ts = data[name].tags;
+-       for (var i in ts) {
+-         tag = ts[i];
+-         tags[tag] = tags[tag] || []
+-         tags[tag].push (name);
+-       }
+-     }
+-   }
+-   return tags;
+- }
+
+#home
+  h1 Tags
+  ul.tags
+    each posts, tag in tagsForPosts(public.posts.data)
+      li
+          a(href="/tags/#{tag}.html")
+            = tag + ' (' + posts.length + ')'
+          | &nbsp;
+  h1 Posts
+  ul.posts
+    each post, name in public.posts.data
+      if name[0] != '_'
+        li
+          span!= post.date
+          | &nbsp; » &nbsp;
+          a(href="/posts/#{name}.html")
+            = post.title

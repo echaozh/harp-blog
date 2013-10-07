@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 900px;
+    margin: auto;
+    font-size: 150%;x
+}
+
+dt {
+    float: left;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    width: 150px;
+    margin-top: 10px;
+}
+
+dd {
+    float: right;
+    text-align: left;
+    width: 700px;
+    border-left: 1px solid #999;
+    padding: 10px 0 10px 26px;
+}
+
+ul.jobs {
+    padding-left: 26px;
+}
+
+ul.jobs p {
+    margin-top: 5px;
+//    margin-bottom: 5px;
+    padding-left: 20px;
+    text-align: justify;
+    text-justify: distribute;
+}
+
+ul.jobs li {
+    margin-top: 10px;
+}
+
+.titles, .employer, .period, .school, .degree, .major {
+    font-style: italic;
+}
+
+.school {
+    margin-left: 150px;
+}
+
+.major {
+    margin-left: 50px;
+}
+
+.employerPadding {
+    padding-left: 300px;
+}
+
+.period {
+    text-align: right;
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+dd.clear {
+    float: none;
+    margin: 0;
+    height: 15px;
+    border-left: none;
+}
+
+h1, h2, address {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+address span {
+    margin-top: 10px;
+}
+
+a {
+    color: black;
+}
