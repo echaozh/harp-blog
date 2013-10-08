@@ -12,6 +12,12 @@ separated by a `<!-- more -->` comment.
 Well, first you add the comment to your posts, like this:
 
 <script src="https://gist.github.com/echaozh/6916985.js"></script>
+<noscript>
+  <a href="https://gist.github.com/echaozh/6916985#file-post-example"
+     target="_blank">
+    Open the Gist
+  </a>
+</noscript>
 
 Then, in `index.jade`, you can render the post and strip away the comment and
 everything after it. Then you got your teaser. This is possible because partials
@@ -25,12 +31,24 @@ The JavaScript code is really simple (assuming you put your posts under
 public/posts):
 
 <script src="https://gist.github.com/echaozh/6917018.js"></script>
+<noscript>
+  <a href="https://gist.github.com/echaozh/6917018#file-teaser-extraction-js"
+     target="_blank">
+    Open the Gist
+  </a>
+</noscript>
 
 Prefix each line with `-` to make it unbuffered code in Jade.
 
 The teaser will look like this:
 
 <script src="https://gist.github.com/echaozh/6917031.js"></script>
+<noscript>
+  <a href="https://gist.github.com/echaozh/6917031#file-teaser-html"
+     target="_blank">
+    Open the Gist
+  </a>
+</noscript>
 
 Put it in the front page.
 
@@ -52,6 +70,12 @@ really straightforward.
 Source of my tag template:
 
 <script src="https://gist.github.com/echaozh/6917115.js"></script>
+<noscript>
+  <a href="https://gist.github.com/echaozh/6917115#file-tag-page-jade"
+     target="_blank">
+    Open the Gist
+  </a>
+</noscript>
 
 ### Jade Snippet to Find Page Data
 
@@ -60,5 +84,11 @@ data registered for the specific template, use the JavaScript snippet below (and
 don't forget to prefix the lines):
 
 <script src="https://gist.github.com/echaozh/6917128.js"></script>
+<noscript>
+  <a href="https://gist.github.com/echaozh/6917128#file-page-data-js"
+     target="_blank">
+    Open the Gist
+  </a>
+</noscript>
 
 I put it in `_page.jade` and include it in almost every Jade template.
