@@ -62,5 +62,3 @@ don't forget to prefix the lines):
 <script src="https://gist.github.com/echaozh/6917128.js"></script>
 
 I put it in `_page.jade` and include it in almost every Jade template.
-
-<script>hljs.initHighlightingOnLoad();</script>
