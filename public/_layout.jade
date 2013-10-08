@@ -33,4 +33,18 @@ body
           br
           a(href="http://weibo.com/echaozh") On Weibo
           br
-          a(href="mailto:echaozh@gmail.com") By Gmail
+          span#email
+            | By Email: echaozh (at) gmail dot com
+            | (Please turn on JavaScript.)
+          br
+          a(href="https://github.com/echaozh/harp-blog/") Blog Source
+
+  script
+    document.getElementById('email').innerHTML =
+      ('<n uers="znvygb:rpunbmu@tznvy.pbz" ery="absbyybj" pynff="rznvy">' +
+       'Ol Rznvy</n>').replace (
+        /[a-zA-Z]/g, function (c) {
+          return String.fromCharCode ((c <= "Z" ? 90 : 122) >=
+                                      (c = c.charCodeAt (0) + 13) ? c
+                                      : c - 26);
+        });
