@@ -17,7 +17,8 @@ include _teasers
     a(href="/posts.html")
       | Whole List:&nbsp
       != Object.keys(posts).length
-    | )
+    | )&nbsp;
+    a(href="/feed.xml") Subscribe
   ul.posts
     - var i = 0
     each teaser, name in posts

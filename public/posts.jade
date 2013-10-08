@@ -3,7 +3,8 @@ include _teasers
 
 - var posts = teasersForPosts()
 
-h1!= 'All Posts (' + Object.keys(posts).length + ')'
+h1!= 'All Posts (' + Object.keys(posts).length + ') '
+  a(href="/feed.xml") Subscribe
 
 ul.posts
   each teaser, name in posts
