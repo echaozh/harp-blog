@@ -182,7 +182,7 @@ ul.tags li {
 
 small.wholeDate {
     font-size: 10px;
-    color: #ccc;
+    color: #aaa;
     padding: 10px 20px 5px 0px;
     float: left;
     text-transform: uppercase;
@@ -197,4 +197,8 @@ pre div {
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
+}
+
+.postTag {
+    color: #888;
 }

@@ -1,9 +1,5 @@
 include ../_page
-include _date
+include _post
 
-+datePad(page.date)
-
-h2= page.title
-.post
-  != partial ("_teaser-" + current.source)
-  != yield
++postHeader(page, false)
+.post!= yield
