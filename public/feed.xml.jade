@@ -1,0 +1,29 @@
+include _teasers
+include posts/_post
+
+doctype xml
+feed(xmlns="http://www.w3.org/2005/Atom")
+  title= site.name
+  link(href="http://example.com/")
+  link(type="application/atom+xml", rel="self",
+       href="http://echaozh.com/feed.xml")
+  updated= new Date().toISOString ()
+  id http://echaozh.com/feed.xml
+  author
+    name Zhang Yichao
+    email echaozh#gmail.com
+
+  - var i = 0
+  each post, name in teasersForPosts()
+    - if (++i <= 15)
+      entry
+        id http://echaozh.com/posts/#{name}.html
+        link(type="text/html", rel="alternate",
+             href="http://echaozh.com/posts/#{name}.html")
+        title= post.title
+        published= post.date
+        updated= post.date
+        author
+          name Zhang Yichao
+          email echaozh#gmail.com
+        content(type="html")= post.content

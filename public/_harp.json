@@ -1,7 +1,8 @@
 {
     "globals": {
         "site": {
-            "name": "A Path Less Travelled"
+            "name": "A Path Less Travelled",
+            "description": "Zhang Yichao's Personal Blog"
         }
     }
 }

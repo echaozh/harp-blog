@@ -2,6 +2,7 @@
 -   var post = public.posts.data[name];
 -   var full = partial ("posts/" + name);
 -   var teaser = {teaser: full.replace (/<!-- more -->(.|\n)*/, '', 'm')};
+-   teaser.content = full;
 -   for (var key in post) {
 -     teaser[key] = post[key];
 -   }

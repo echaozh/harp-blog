@@ -2,6 +2,9 @@
     "_layout": {
         "extras": ["posts", "about", "family", "resumes"]
     },
+    "feed": {
+        "layout": false
+    },
     "index": {
         "title": "A Path Less Travelled"
     },
