@@ -11,7 +11,7 @@ body
   h2 Zhang Yichao
   address
     | Email:&nbsp;
-    a.email(href="mailto:echaozh@gmail.com") echaozh@gmail.com
+    span#email echaozh (at) gmail dot com (Please turn on JavaScript.)
     br
     | Github Account:&nbsp;
     a.github(href="https://github.com/echaozh") https://github.com/echaozh
@@ -79,3 +79,13 @@ body
 
     dt Interest
     dd Reading, mostly science fiction and high fantasy.
+
+  script
+    document.getElementById('email').innerHTML =
+      ('<n uers="znvygb:rpunbmu@tznvy.pbz" ery="absbyybj" pynff="rznvy">' +
+       'rpunbmu@tznvy.pbz</n>').replace (
+        /[a-zA-Z]/g, function (c) {
+          return String.fromCharCode ((c <= "Z" ? 90 : 122) >=
+                                      (c = c.charCodeAt (0) + 13) ? c
+                                      : c - 26);
+        });
