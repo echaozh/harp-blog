@@ -10,8 +10,12 @@ head
   link(rel="stylesheet", href="/css/syntax.css")
   //  Custom CSS
   link(rel="stylesheet", href="/css/main.css")
+  each seg in current.path
+    if seg == 'posts'
+      link(rel="stylesheet", href="/css/posts.css")
   if page.css
     link(rel="stylesheet", href="/css/#{page.css}.css")
+
 body
   .site
     .header

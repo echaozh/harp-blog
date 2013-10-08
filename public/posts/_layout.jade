@@ -1,5 +1,14 @@
 include ../_page
 
+- var upperYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+- var lowerYear = ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+- var months = upperYear.concat (lowerYear);
+- var splitDate = page.date.split ('-');
+
+small.wholeDate
+  span.date= splitDate[2]
+  br
+  = months[parseInt (splitDate[1]) - 1] + ' ' + splitDate[0]
+
 h2= page.title
-p.meta= page.date
 .post!= yield
