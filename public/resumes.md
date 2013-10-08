@@ -1,4 +1,4 @@
 - [English resume](/resumes/resume.html)
 - [English resume, download PDF](/resumes/resume.pdf)
-- [Chinese resume](/resumes/resume-cn.html)
-- [Chinese resume, download PDF](/resumes/resume-cn.pdf)
+- [中文简历](/resumes/resume-cn.html)
+- [中文简历, 下载PDF版本](/resumes/resume-cn.pdf)
