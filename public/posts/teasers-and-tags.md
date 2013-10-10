@@ -11,15 +11,7 @@ separated by a `<!-- more -->` comment.
 
 Well, first you add the comment to your posts, like this:
 
-```markdown
-The [python-dbtxn](https://github.com/echaozh/python-dbtxn) is a library I wrote to ease db accessing from Python programs. Directly calling Python DBI leaves a lot of boilerplate code all over the place, and boilerplate code is bad. I googled, and there are no dbtxn like libraries, so I wrote my own.
-
-<!-- more -->
-
-There are 2 sources of boilerplate code:
-
-...
-```
+<script src="https://gist.github.com/echaozh/6916985.js"></script>
 
 Then, in `index.jade`, you can render the post and strip away the comment and
 everything after it. Then you got your teaser. This is possible because partials
@@ -32,20 +24,13 @@ away everything you don't need.
 The JavaScript code is really simple (assuming you put your posts under
 public/posts):
 
-```javascript
-var teaserForPost = function(name) {
-  var full = partial ("posts/" + name);
-  return full.replace (/<!-- more -->(.|\n)*/, '', 'm');
-}
-```
+<script src="https://gist.github.com/echaozh/6917018.js"></script>
 
 Prefix each line with `-` to make it unbuffered code in Jade.
 
 The teaser will look like this:
 
-```html
-<p>The <a href="https://github.com/echaozh/python-dbtxn">python-dbtxn</a> is a library I wrote to ease db accessing from Python programs. Directly calling Python DBI leaves a lot of boilerplate code all over the place, and boilerplate code is bad. I googled, and there are no dbtxn like libraries, so I wrote my own.</p>
-```
+<script src="https://gist.github.com/echaozh/6917031.js"></script>
 
 Put it in the front page.
 
@@ -66,38 +51,7 @@ really straightforward.
 
 Source of my tag template:
 
-```jade
-- var tagsForPosts = function() {
--   var data = public.posts.data;
--   var tags = {};
--   for (var name in data) {
--     if (name[0] != '_') {
--       var ts = data[name].tags;
--       for (var i in ts) {
--         tag = ts[i];
--         tags[tag] = tags[tag] || []
--         tags[tag].push (name);
--       }
--     }
--   }
--   return tags;
-- }
-
-h1 Posts tagged with&nbsp;
-  span#tagName
-
-each posts, tag in tagsForPosts()
-  ul.posts(id=tag, style="display: none")
-    each name in posts
-      li
-        - var teaser = teaserForPost(name);
-        +postTeaser(teaser)
-
-script.
-  var tag = window.location.hash.substr (1);
-  document.getElementById ("tagName").innerText = tag;
-  document.getElementById (tag).style.display = "block";
-```
+<script src="https://gist.github.com/echaozh/6917115.js"></script>
 
 ### Jade Snippet to Find Page Data
 
@@ -105,16 +59,7 @@ Harp only sends in a `current` object with path info of the template. To find
 data registered for the specific template, use the JavaScript snippet below (and
 don't forget to prefix the lines):
 
-```javascript
-var page = (function (cur) {
-  var data = public;
-  for (var i = 0; i < cur.path.length - 1; ++i) {
-    data = data[cur.path[i]];
-  }
-  data = data.data[cur.path[cur.path.length - 1]];
-  return data;
-}) (current);
-```
+<script src="https://gist.github.com/echaozh/6917128.js"></script>
 
 I put it in `_page.jade` and include it in almost every Jade template.
 

@@ -192,7 +192,7 @@ small.wholeDate {
     color: #00c;
 }
 
-pre code {
+pre div {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;

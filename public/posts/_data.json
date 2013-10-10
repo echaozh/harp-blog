@@ -5,9 +5,7 @@
     "teasers-and-tags": {
         "title": "Adding Teasers and Tags for Posts with Harp",
         "date": "2013-10-10",
-        "tags": ["meta", "harp", "javascript", "jade"],
-        "js": ["highlight.pack"],
-        "css": ["github"]
+        "tags": ["meta", "harp", "javascript", "jade"]
     },
     "to-harp": {
         "title": "Migrated Blog to Harp",
