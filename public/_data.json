@@ -1,7 +1,4 @@
 {
-    "_site": {
-        "name": "A Path Less Travelled"
-    },
     "_layout": {
         "extras": ["about", "family", "resumes"]
     },

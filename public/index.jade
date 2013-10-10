@@ -8,7 +8,7 @@ include _teasers
     each posts, tag in tagsForPosts()
       li
           a(href="/tag.html##{tag}")
-            = tag + ' (' + posts.length + ')'
+            = tag + '(' + posts.length + ')'
           | &nbsp;
   h1 Posts
   ul.posts

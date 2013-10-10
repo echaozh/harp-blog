@@ -191,3 +191,10 @@ small.wholeDate {
 #tagName {
     color: #00c;
 }
+
+pre code {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+}

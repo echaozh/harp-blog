@@ -1,9 +1,7 @@
 - var teaserForPost = function(name) {
 -   var post = public.posts.data[name];
--   var teaser = partial ("posts/_teaser-" + name);
--   if (teaser === null) {
--     teaser = partial ("posts/" + name);
--   }
+-   var full = partial ("posts/" + name);
+-   var teaser = full.replace (/<!-- more -->(.|\n)*/, '', 'm');
 -   return {teaser: teaser, date: post.date, title: post.title, name: name};
 - }
 - var teasersForPosts = function() {

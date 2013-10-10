@@ -9,20 +9,24 @@ head
     if page && page.title
       != page.title
     else
-      != public.data._site.name
+      != site.name
   //  syntax highlighting CSS
   link(rel="stylesheet", href="/css/syntax.css")
   //  Custom CSS
   link(rel="stylesheet", href="/css/main.css")
   if page && page.css
-    link(rel="stylesheet", href="/css/#{page.css}.css")
+    each css in page.css
+      link(rel="stylesheet", href="/css/#{css}.css")
+  if page && page.js
+    each js in page.js
+      script(type="text/javascript", src="/js/#{js}.js")
 
 body
   .site
     .header
       h1.title
         a(href="/")
-          != public.data._site.name
+          != site.name
       a.extra(href="/") home
       each extra in extras
         a.extra(href="/#{extra}.html")
