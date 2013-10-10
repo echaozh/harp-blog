@@ -1,50 +1,17 @@
-include posts/_date
-
-- var tagsForPosts = function() {
--   var data = public.posts.data;
--   var tags = {};
--   for (var name in data) {
--     if (name[0] != '_') {
--       var ts = data[name].tags;
--       for (var i in ts) {
--         tag = ts[i];
--         tags[tag] = tags[tag] || []
--         tags[tag].push (name);
--       }
--     }
--   }
--   return tags;
-- }
-- var teasersForPosts = function() {
--   var data = public.posts.data;
--   var teasers = {};
--   for (var name in data) {
--     if (name[0] != '_') {
--       var post = data[name];
--       var teaser = partial ("posts/_teaser-" + name);
--       if (teaser === null) {
--         teaser = partial ("posts/" + name);
--       }
--       teasers[name] = {teaser: teaser, date: post.date, title: post.title}
--     }
--   }
--   return teasers;
-- }
+include _tags
+include _listing
+include _teasers
 
 #home
   h1 Tags
   ul.tags
     each posts, tag in tagsForPosts()
       li
-          a(href="/tags/#{tag}.html")
+          a(href="/tag.html##{tag}")
             = tag + ' (' + posts.length + ')'
           | &nbsp;
   h1 Posts
   ul.posts
     each teaser, name in teasersForPosts()
       li
-        +datePad(teaser.date)
-        h2
-          a(href="/posts/#{name}.html")
-            != teaser.title
-        teaser!= teaser.teaser
+        +postTeaser(teaser)

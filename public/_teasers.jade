@@ -1,0 +1,18 @@
+- var teaserForPost = function(name) {
+-   var post = public.posts.data[name];
+-   var teaser = partial ("posts/_teaser-" + name);
+-   if (teaser === null) {
+-     teaser = partial ("posts/" + name);
+-   }
+-   return {teaser: teaser, date: post.date, title: post.title, name: name};
+- }
+- var teasersForPosts = function() {
+-   var data = public.posts.data;
+-   var teasers = {};
+-   for (var name in data) {
+-     if (name[0] != '_') {
+-       teasers[name] = teaserForPost(name);
+-     }
+-   }
+-   return teasers;
+- }

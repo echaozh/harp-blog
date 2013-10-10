@@ -5,15 +5,16 @@ head
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible", content "IE=edge,chrome=1")
   meta(name="viewport", content="width=device-width")
-  title!= page.title
+  title
+    if page && page.title
+      != page.title
+    else
+      != public.data._site.name
   //  syntax highlighting CSS
   link(rel="stylesheet", href="/css/syntax.css")
   //  Custom CSS
   link(rel="stylesheet", href="/css/main.css")
-  each seg in current.path
-    if seg == 'posts'
-      link(rel="stylesheet", href="/css/posts.css")
-  if page.css
+  if page && page.css
     link(rel="stylesheet", href="/css/#{page.css}.css")
 
 body
@@ -43,7 +44,7 @@ body
           br
           a(href="https://github.com/echaozh/harp-blog/") Blog Source
 
-  script
+  script.
     document.getElementById('email').innerHTML =
       ('<n uers="znvygb:rpunbmu@tznvy.pbz" ery="absbyybj" pynff="rznvy">' +
        'Ol Rznvy</n>').replace (

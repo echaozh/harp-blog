@@ -1,0 +1,18 @@
+include _tags
+include _listing
+include _teasers
+
+h1 Posts tagged with&nbsp;
+  span#tagName
+
+each posts, tag in tagsForPosts()
+  ul.posts(id=tag, style="display: none")
+    each name in posts
+      li
+        - var teaser = teaserForPost(name);
+        +postTeaser(teaser)
+
+script.
+  var tag = window.location.hash.substr (1);
+  document.getElementById ("tagName").innerText = tag;
+  document.getElementById (tag).style.display = "block";

@@ -1,0 +1,15 @@
+- var tagsForPosts = function() {
+-   var data = public.posts.data;
+-   var tags = {};
+-   for (var name in data) {
+-     if (name[0] != '_') {
+-       var ts = data[name].tags;
+-       for (var i in ts) {
+-         tag = ts[i];
+-         tags[tag] = tags[tag] || []
+-         tags[tag].push (name);
+-       }
+-     }
+-   }
+-   return tags;
+- }

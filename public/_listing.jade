@@ -1,0 +1,8 @@
+include posts/_date
+
+mixin postTeaser(teaser)
+  +datePad(teaser.date)
+  h2
+    a(href="/posts/#{teaser.name}.html")
+      != teaser.title
+  teaser!= teaser.teaser
