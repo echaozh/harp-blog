@@ -1,4 +1,7 @@
-- var tagsForPosts = function(data) {
+include posts/_date
+
+- var tagsForPosts = function() {
+-   var data = public.posts.data;
 -   var tags = {};
 -   for (var name in data) {
 -     if (name[0] != '_') {
@@ -12,21 +15,36 @@
 -   }
 -   return tags;
 - }
+- var teasersForPosts = function() {
+-   var data = public.posts.data;
+-   var teasers = {};
+-   for (var name in data) {
+-     if (name[0] != '_') {
+-       var post = data[name];
+-       var teaser = partial ("posts/_teaser-" + name);
+-       if (teaser === null) {
+-         teaser = partial ("posts/" + name);
+-       }
+-       teasers[name] = {teaser: teaser, date: post.date, title: post.title}
+-     }
+-   }
+-   return teasers;
+- }
 
 #home
   h1 Tags
   ul.tags
-    each posts, tag in tagsForPosts(public.posts.data)
+    each posts, tag in tagsForPosts()
       li
           a(href="/tags/#{tag}.html")
             = tag + ' (' + posts.length + ')'
           | &nbsp;
   h1 Posts
   ul.posts
-    each post, name in public.posts.data
-      if name[0] != '_'
-        li
-          span!= post.date
-          | &nbsp; » &nbsp;
+    each teaser, name in teasersForPosts()
+      li
+        +datePad(teaser.date)
+        h2
           a(href="/posts/#{name}.html")
-            = post.title
+            != teaser.title
+        teaser!= teaser.teaser

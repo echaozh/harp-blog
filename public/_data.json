@@ -6,7 +6,8 @@
         "extras": ["about", "family", "resumes"]
     },
     "index": {
-        "title": "A Path Less Travelled"
+        "title": "A Path Less Travelled",
+        "css": "posts"
     },
     "resumes": {
         "title": "Zhang Yichao's Resumes"

@@ -1,14 +1,9 @@
 include ../_page
+include _date
 
-- var upperYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
-- var lowerYear = ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-- var months = upperYear.concat (lowerYear);
-- var splitDate = page.date.split ('-');
-
-small.wholeDate
-  span.date= splitDate[2]
-  br
-  = months[parseInt (splitDate[1]) - 1] + ' ' + splitDate[0]
++datePad(page.date)
 
 h2= page.title
-.post!= yield
+.post
+  != partial ("_teaser-" + current.source)
+  != yield

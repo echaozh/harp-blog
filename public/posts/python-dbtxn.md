@@ -1,5 +1,3 @@
-The [python-dbtxn](https://github.com/echaozh/python-dbtxn) is a library I wrote to ease db accessing from Python programs. Directly calling Python DBI leaves a lot of boilerplate code all over the place, and boilerplate code is bad. I googled, and there are no dbtxn like libraries, so I wrote my own.
-
 There are 2 sources of boilerplate code:
 
 1. cursor.execute() and cursor.fetchall()/cursor.rowcount/cursor.lastrowid have to be separately called to execute a SQL and then acquire the results/information of the execution;

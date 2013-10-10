@@ -1,8 +1,3 @@
-I have migrated my blog to [Harp](http://harpjs.com)! Now I've waved goodbye to
-[Jekyll](http://jekyllrb.com) and [Blaze HTML](http://jaspervdj.be/blaze/),
-and am using [Jade](http://jade-lang.com) instead. I am pretty happy with the
-migration.
-
 Though I am not using Harp as a server, I'm happy with its compilation process.
 With native Jade support, I can finally get rid of my Makefiles! Jade also
 supports embedded JavaScript logic, so tag pages can be generated directly in the
