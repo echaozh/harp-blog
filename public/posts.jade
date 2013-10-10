@@ -1,0 +1,11 @@
+include _listing
+include _teasers
+
+- var posts = teasersForPosts()
+
+h1!= 'All Posts (' + Object.keys(posts).length + ')'
+
+ul.posts
+  each teaser, name in posts
+    li
+      +postTeaser(teaser)

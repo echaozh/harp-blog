@@ -2,6 +2,8 @@ include _tags
 include _listing
 include _teasers
 
+- var posts = teasersForPosts()
+
 #home
   h1 Tags
   ul.tags
@@ -10,8 +12,15 @@ include _teasers
           a(href="/tag.html##{tag}")
             = tag + '(' + posts.length + ')'
           | &nbsp;
-  h1 Posts
+  h1
+    | Posts (
+    a(href="/posts.html")
+      | Whole List:&nbsp
+      != Object.keys(posts).length
+    | )
   ul.posts
-    each teaser, name in teasersForPosts()
-      li
-        +postTeaser(teaser)
+    - var i = 0
+    each teaser, name in posts
+      - if (++i <= 10)
+        li
+          +postTeaser(teaser)

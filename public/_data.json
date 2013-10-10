@@ -1,6 +1,6 @@
 {
     "_layout": {
-        "extras": ["about", "family", "resumes"]
+        "extras": ["posts", "about", "family", "resumes"]
     },
     "index": {
         "title": "A Path Less Travelled"
