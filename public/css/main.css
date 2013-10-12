@@ -202,3 +202,8 @@ pre div {
 .postTag {
     color: #888;
 }
+
+.teaser a {
+    color: black;
+    font-weight: normal;
+}
