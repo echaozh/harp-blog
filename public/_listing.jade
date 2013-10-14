@@ -1,5 +1,6 @@
 include posts/_post
 
 mixin postTeaser(teaser)
-  +postHeader(teaser, true)
-  .teaser!= teaser.teaser
+  article
+    +postHeader(teaser, true)
+    .teaser!= teaser.teaser

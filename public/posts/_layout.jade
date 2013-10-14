@@ -1,8 +1,9 @@
 include ../_page
 include _post
 
-+postHeader(page, false)
-.post!= yield
+article
+  +postHeader(page, false)
+  .post!= yield
 
 #attoolbox(class="addthis_toolbox addthis_default_style addthis_16x16_style",
            style="display: inline")
@@ -22,14 +23,6 @@ script(type="text/javascript",
        src="http://s7.addthis.com/js/250/addthis_widget.js#username=echaozh")
 
 script(type="text/javascript")
-  // var tbx = document.getElementById("attoolbox"),
-  // svcs = ['email', 'print', 'reddit', 'hackernews', 'linkedin', 'google_plusone',
-  //         'sinaweibo', 'facebook_like', 'twitter', 'expanded'];
-
-  // for (var i in svcs) {
-  //     tbx.innerHTML += '<a class="addthis_button_' + svcs[i] + '" ' +
-  //                      'style="display: inline"></a>';
-  // }
   addthis.toolbox("#attoolbox");
   addthis.counter("#atcounter");
 
