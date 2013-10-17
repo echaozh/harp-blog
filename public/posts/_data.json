@@ -2,6 +2,11 @@
     "_layout": {
         "layout": "../_layout"
     },
+    "gitlab-and-seals": {
+        "title": "GitLab with Seals as Authentication Provider, etc",
+        "date": "2013-10-18",
+        "tags": ["gitlab", "seals", "ruby", "opensource", "work", "programming"]
+    },
     "teasers-and-tags": {
         "title": "Adding Teasers and Tags for Posts with Harp",
         "date": "2013-10-10",
