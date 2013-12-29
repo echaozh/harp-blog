@@ -2,6 +2,11 @@
     "_layout": {
         "layout": "../_layout"
     },
+    "functional_cpp": {
+        "title": "Programming in C++ in a More Functional Way",
+        "date": "2013-12-29",
+        "tags": ["c++", "functional", "libcppa", "raft"]
+    },
     "teasers-and-tags": {
         "title": "Adding Teasers and Tags for Posts with Harp",
         "date": "2013-10-10",
