@@ -1,6 +1,5 @@
 Recently I'm playing with [libcppa](https://github.com/Neverlord/libcppa), by
-implementing the [Raft consensus protocol]
-(https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf).
+implementing the [Raft consensus protocol](https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf).
 
 When I am writing tests, I become more and more certain that classes is not the
 right pieces to make up a program. A class, or its encapsulation by using private
