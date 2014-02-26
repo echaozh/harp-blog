@@ -26,13 +26,12 @@ dd {
     padding: 10px 0 10px 26px;
 }
 
-ul.jobs {
+ul.jobs, ul.skills, ul.languages {
     padding-left: 26px;
 }
 
 ul.jobs p {
     margin-top: 5px;
-//    margin-bottom: 5px;
     padding-left: 20px;
     text-align: justify;
     text-justify: distribute;
