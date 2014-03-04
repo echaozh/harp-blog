@@ -2,10 +2,15 @@
     "_layout": {
         "layout": "../_layout"
     },
+    "monad-edsl": {
+        "title": "Monads as EDSL",
+        "date": "2014-03-05",
+        "tags": ["haskell", "monad", "ruby", "edsl", "evangelism"]
+    },
     "haskell-my-destination": {
         "title": "Haskell My Destination",
         "date": "2014-03-04",
-        "tags": ["haskell"]
+        "tags": ["haskell", "evangelism"]
     },
     "functional_cpp": {
         "title": "Programming in C++ in a More Functional Way",

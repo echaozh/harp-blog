@@ -19,7 +19,12 @@ middle, but can produce so much.
 In Smalltalk and Ruby, everything is an object. In Common Lisp, everything is a
 list. In Haskell, everything is a function. Even a variable is a function with
 no argument. You know, since a function with no argument always does the same
-thing, they'd better be called constants rather than variables.
+thing, they'd better be called constants rather than variables. Even better,
+all functions, except the constants, are not only functions, but also unary
+functions. That is, they take only 1 argument, and return something. Then how do
+Haskellers add 1 to 2? you would ask. Well, (+) is an unary function too! It
+takes 1 and returns... (1+)! It's another function! and you can apply it to 2,
+giving 3.
 
 Simple as that. Sure, there must be something else. You have types, but they
 seldom play a significant role in the program logic (not saying that they will
