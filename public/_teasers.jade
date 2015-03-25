@@ -1,5 +1,5 @@
 - var teaserForPost = function(name) {
--   var post = public.posts.data[name];
+-   var post = public.posts._data[name];
 -   var full = partial ("posts/" + name);
 -   var teaser = {teaser: full.replace (/<!-- more -->(.|\n)*/, '', 'm')};
 -   teaser.content = full;
@@ -10,7 +10,7 @@
 -   return teaser;
 - }
 - var teasersForPosts = function() {
--   var data = public.posts.data;
+-   var data = public.posts._data;
 -   var teasers = {};
 -   for (var name in data) {
 -     if (name[0] != '_') {
