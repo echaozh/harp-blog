@@ -1,10 +1,11 @@
-!!!
+doctype html
+
 head
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
   meta(name="viewport", content="width=device-width")
   title 张毅超的简历
-  link(rel="stylesheet", href="/css/resume.css")
+  link(rel="stylesheet", href="../css/resume.css")
 
 body
   h1 简历
@@ -36,18 +37,34 @@ body
       br
       span.employerPadding
       span.employer 阜博通
-      span.period 2005 － 至今
+      span.period 2005 － 2015
       ul.jobs
         li
           span 设计开发视频鉴别平台
           p
             | &nbsp;&nbsp;负责视频鉴别平台算法的产品化，其实现及优化。音视频、图像的特征提取
             | ，及特征在大型数据集中的匹配。匹配平台是一个可伸缩、具备高可用性的分布式系统。
-            br
-            | &nbsp;&nbsp;系统被美国主要电影公司用于在全球打击盗版影视。UGC网站也用它来主动
-            | 下架盗版视频。更有电视台用它来向观众提供手持设备上的互动体验。在国内，也有电视台
-            | 与政府部门的合作项目。
-    dd.clear
+    //-         br
+    //-         | &nbsp;&nbsp;系统被美国主要电影公司用于在全球打击盗版影视。UGC网站也用它来主动
+    //-         | 下架盗版视频。更有电视台用它来向观众提供手持设备上的互动体验。在国内，也有电视台
+    //-         | 与政府部门的合作项目。
+    //- dd.clear
+    dd
+      span.titles
+        实习，研发工程师，系统架构师
+      br
+      span.employerPadding
+      span.employer 乐其
+      span.period 2015 － 至今
+      ul.jobs
+        li
+          span 开发部署电商平台
+          p
+            | &nbsp;&nbsp;负责基于HTML5的电商平台的开发部署，参与App版本的开发工作。对于电
+            | 商平台的开发和运营都有深入的了解。
+    //-         br
+    //-         | &nbsp;&nbsp;网站在极端的时间内就达到并超越了同行业竞争对手的访问和单量，并在短时间内吸引了大量反复购买、并主动传 播的忠实用户。
+    //- dd.clear
 
     dt 技能
     dd
@@ -55,13 +72,15 @@ body
         li
           | 编程语言:&nbsp;
           ul.languages
-            li(style="font-style: italic") 工作语言: C++/C, Python, Bash
-            li(style="font-style: italic") 工作上使用过: Ruby, JavaScript
-            li(style="font-style: italic") 个人项目: Haskell
+            li(style="font-style: italic").
+              工作语言: JavaScript, Python, C++/C, Bash, PHP
+            li(style="font-style: italic") 工作上使用过: Ruby
+            li(style="font-style: italic") 个人项目: Haskell, Golang
           li 分布式系统开发及搭建。对于一致性算法有深入了解。
-          li 对于关系性和NoSQL数据库有相关经验。
-          li 解决问题。具有解决问题、改进代码的决心和自我驱动力。
-          li 有带领技术团队的经验，并能作出技术决策。
+          li HTML5网站开发及搭建，对电商网站的部署和运营都有深入了解。
+          li 对于关系性和NoSQL数据库有丰富经验。
+          li 善于解决复杂的技术和业务问题，并对问题的原因和解决有深刻的洞察力。
+          li 带领技术团队，作出有效的技术决策并予以执行。
     dd.clear
 
     dt 教育背景
@@ -79,10 +98,7 @@ body
       span.period 2002 - 2006
     dd.clear
 
-    dt 爱好
-    dd 阅读，科幻及奇幻类作品。
-
-  script
+  script.
     document.getElementById('email').innerHTML =
       ('<n uers="znvygb:rpunbmu@tznvy.pbz" ery="absbyybj" pynff="rznvy">' +
        'rpunbmu@tznvy.pbz</n>').replace (
